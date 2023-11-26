@@ -21,7 +21,7 @@
       </button>
       <div class="collapse navbar-collapse" id="nav-bar">
         <!-- 例題3 タブ型ナビゲーションの指定を追加 -->
-        <ul class="nav">
+        <ul class="nav nav-tabs">
           <li class="nav-item"><a href="#" class="nav-link">会社情報</a></li>
           <li class="nav-item"><a href="index.html" class="nav-link">お問合せ検索</a></li>
           <li class="nav-item active"><a href="contact.html" class="nav-link">お問合せ</a></li>
@@ -33,26 +33,29 @@
     <h3 class="mt-4 pb-4">お問合せの検索</h3>
     <p>過去お問い合わせを検索してみましょう。</p>
     <!-- 例題2 グリッドを使うための指定を追加 -->
-    <div class="mt-4">
+    <div class="mt-4 row">
       <!-- 例題2 576px以上の画面幅(prefix:sm)のとき、左側2つ分のカラム幅で「お問合せ検索」の見出しを表示する指定を追加 -->
       <!-- 例題6 検索アイコン（search）を追加 -->
-      <strong> お問合せ検索</strong>
+      <div class="col-sm-2"><i class="bi bi-search"></i><strong> お問合せ検索</strong></div>
       <!-- 例題2 576px以上の画面幅(prefix:sm)のとき、右側10こ分のカラム幅で「検索条件入力窓」を表示する指定を追加 -->
+      <div class="col-sm-10 text-left">
         <div style="border: 4px double #face11;font-size: 100%; padding: 20px;">
           <form name="contact" method="post" action="index.html">
             <h5 class="heading">条件を指定してお問合せを探す</h5>
             お名前：<input type="text" name="name" required/>
             <!-- 例題5 ボタンスタイルに緑色を指定する -->
-            <button type="submit" class="btn" action="index.html" style="display: block;margin: 0 0 0 auto;">検索する</button>
+            <button type="submit" class="btn btn-success" action="index.html" style="display: block;margin: 0 0 0 auto;">検索する</button>
           </form>
         </div>
+      </div>
       <br>
       <!-- 例題2 576px以上の画面幅(prefix:sm)のとき、左側2つ分のカラム幅で「検索結果一覧」の見出しを表示する指定を追加 -->
       <!-- 例題6 チェックリストアイコン（card-checklist）を追加 -->
-      <strong> 検索結果一覧</strong>
+      <div class="col-sm-2"><i class="bi bi-card-checklist"></i><strong> 検索結果一覧</strong></div>
       <!-- 例題2 576px以上の画面幅(prefix:sm)のとき、右側10こ分のカラム幅で「検索結果一覧」を表示する指定を追加 -->
+      <div class="col-sm-10 text-left">
         <!-- 例題4 テーブルスタイルは罫線付き、縞模様テーブルを選択 -->
-        <table class="table">
+        <table class="table table-striped table-bordered">
           <thead>
             <tr>
               <th>ID</th>
@@ -74,10 +77,11 @@
             </tr>
           </tbody>
         </table>
+      </div>
     </div>
     <div class="form-group">
       <!-- 例題5 ボタンスタイルに緑色を指定する -->
-      <div class="text-center mb-4"> <a href="contact.html" class="btn btn-block">お問合せ画面に戻る</a></br>
+      <div class="text-center mb-4"> <a href="contact.html" class="btn btn-success">お問合せ画面に戻る</a></br>
       </div>
     </div>
   </div>
