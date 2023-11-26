@@ -1,0 +1,10 @@
+.align-right {
+ text-align: right;
+}
+
+@media only screen and (max-width: 992px) {
+   .radio-inline {
+     display: block;
+     margin: 0 !important;
+   }
+}

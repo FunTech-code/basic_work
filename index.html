@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <title>プログラミングスクール｜FunTech</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <a href="#" class="navbar-brand">
+        <img src="1609766641526.jpg" alt="FunTech" width="160" height="40">
+      </a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#nav-bar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav-bar">
+        <!-- 例題3 タブ型ナビゲーションの指定を追加 -->
+        <ul class="nav">
+          <li class="nav-item"><a href="#" class="nav-link">会社情報</a></li>
+          <li class="nav-item"><a href="index.html" class="nav-link">お問合せ検索</a></li>
+          <li class="nav-item active"><a href="contact.html" class="nav-link">お問合せ</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div class="container">
+    <h3 class="mt-4 pb-4">お問合せの検索</h3>
+    <p>過去お問い合わせを検索してみましょう。</p>
+    <!-- 例題2 グリッドを使うための指定を追加 -->
+    <div class="mt-4">
+      <!-- 例題2 576px以上の画面幅(prefix:sm)のとき、左側2つ分のカラム幅で「お問合せ検索」の見出しを表示する指定を追加 -->
+      <!-- 例題6 検索アイコン（search）を追加 -->
+      <strong> お問合せ検索</strong>
+      <!-- 例題2 576px以上の画面幅(prefix:sm)のとき、右側10こ分のカラム幅で「検索条件入力窓」を表示する指定を追加 -->
+        <div style="border: 4px double #face11;font-size: 100%; padding: 20px;">
+          <form name="contact" method="post" action="index.html">
+            <h5 class="heading">条件を指定してお問合せを探す</h5>
+            お名前：<input type="text" name="name" required/>
+            <!-- 例題5 ボタンスタイルに緑色を指定する -->
+            <button type="submit" class="btn" action="index.html" style="display: block;margin: 0 0 0 auto;">検索する</button>
+          </form>
+        </div>
+      <br>
+      <!-- 例題2 576px以上の画面幅(prefix:sm)のとき、左側2つ分のカラム幅で「検索結果一覧」の見出しを表示する指定を追加 -->
+      <!-- 例題6 チェックリストアイコン（card-checklist）を追加 -->
+      <strong> 検索結果一覧</strong>
+      <!-- 例題2 576px以上の画面幅(prefix:sm)のとき、右側10こ分のカラム幅で「検索結果一覧」を表示する指定を追加 -->
+        <!-- 例題4 テーブルスタイルは罫線付き、縞模様テーブルを選択 -->
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>会社名</th>
+              <th>お名前</th>
+              <th>メールアドレス</th>
+              <th>電話番号</th>
+              <th>お問い合わせ内容</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Tech会社</td>
+              <td>fun太郎</td>
+              <td>funtech341@gmail.com</td>
+              <td>000-0000-0000</td>
+              <td>説明会を5/4 12:00-18:00で希望します</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <div class="form-group">
+      <!-- 例題5 ボタンスタイルに緑色を指定する -->
+      <div class="text-center mb-4"> <a href="contact.html" class="btn btn-block">お問合せ画面に戻る</a></br>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <footer>
+    <p class="text-right">Copyright&copy; 2021 FunTech Inc.</p>
+  </footer>
+</body>
+</html>
