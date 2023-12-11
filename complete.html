@@ -1,14 +1,24 @@
 <?php
 $company = "";
-$company = $_POST['company'];
+if(array_key_exists('company', $_POST)){
+  $company = htmlspecialchars($_POST['company'], ENT_HTML5, 'UTF-8');
+}
 $name = "";
-$name = $_POST['name'];
+if(array_key_exists('name', $_POST)){
+  $name = htmlspecialchars($_POST['name'], ENT_HTML5, 'UTF-8');
+}
 $mail = "";
-$mail = $_POST['mail'];
+if(array_key_exists('mail', $_POST)){
+  $mail = htmlspecialchars($_POST['mail'], ENT_HTML5, 'UTF-8');
+}
 $tel = "";
-$tel = $_POST['tel'];
+if(array_key_exists('mail', $_POST)){
+  $tel = htmlspecialchars($_POST['tel'], ENT_HTML5, 'UTF-8');
+}
 $content = "";
-$content = $_POST['content'];
+if(array_key_exists('content', $_POST)){
+  $content = htmlspecialchars($_POST['content'], ENT_HTML5, 'UTF-8');
+}
 ?>
 <!DOCTYPE html>
 <html lang="ja">
