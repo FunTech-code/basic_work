@@ -1,5 +1,6 @@
 <?php
     require_once 'dbManager.php';
+    require_once 'encode.php';
     try {
         $db = getDb();
     } catch (PDOException $e) {
@@ -49,23 +50,23 @@
           <tbody>
             <tr>
               <th>会社名</th>
-              <td><?php print $company?></td>
+              <td><?=e('company',$_POST)?></td>
             </tr>
             <tr>
               <th>お名前</th>
-              <td><?php print $name?></td>
+              <td><?=e('name',$_POST)?></td>
             </tr>
             <tr>
               <th>メール</th>
-              <td><?php print $mail?></td>
+              <td><?=e('mail',$_POST)?></td>
             </tr>
             <tr>
               <th>電話番号</th>
-              <td><?php print $tel?></td>
+              <td><?=e('tel',$_POST)?></td>
             </tr>
             <tr>
               <th>お問い合わせ内容</th>
-              <td><?php print $content?></td>
+              <td><?=e('content',$_POST)?></td>
             </tr>
           </tbody>
         </table>
