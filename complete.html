@@ -1,3 +1,10 @@
+<?php
+$company = $_GET['company'];
+$name = $_GET['name'];
+$mail = $_GET['mail'];
+$tel = $_GET['tel'];
+$content = $_GET['content'];
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -38,23 +45,23 @@
           <tbody>
             <tr>
               <th>会社名</th>
-              <td></td>
+              <td><?php print $company?></td>
             </tr>
             <tr>
               <th>お名前</th>
-              <td></td>
+              <td><?php print $name?></td>
             </tr>
             <tr>
               <th>メール</th>
-              <td></td>
+              <td><?php print $mail?></td>
             </tr>
             <tr>
               <th>電話番号</th>
-              <td></td>
+              <td><?php print $tel?></td>
             </tr>
             <tr>
               <th>お問い合わせ内容</th>
-              <td></td>
+              <td><?php print $content?></td>
             </tr>
           </tbody>
         </table>
