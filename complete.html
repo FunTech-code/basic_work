@@ -2,7 +2,20 @@
     require_once 'dbManager.php';
     require_once 'encode.php';
     try {
-        $db = getDb();
+      // INSERT命令の準備
+      if(!array_key_exists('name', $_POST)){
+        retrun;
+      }
+      $stmt = $db->prepare('INSERT INTO contact (company, name, mail, tel, content) VALUES (?,?,?,?,?)');
+      // INSERTにPOSTデータの内容設定
+      $stmt->bindValue(1, $_POST['company']);
+      $stmt->bindValue(2, $_POST['name']);
+      $stmt->bindValue(3, $_POST['mail']);
+      $stmt->bindValue(4, $_POST['tel']);
+      $stmt->bindValue(5, $_POST['content']);
+      // INSERT命令の実行
+      $stmt->execute();
+
     } catch (PDOException $e) {
         print "エラー!: " . $e->getMessage() . "<br/>";
     } finally {
