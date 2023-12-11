@@ -1,24 +1,13 @@
 <?php
-$company = "";
-if(array_key_exists('company', $_POST)){
-  $company = htmlspecialchars($_POST['company'], ENT_HTML5, 'UTF-8');
-}
-$name = "";
-if(array_key_exists('name', $_POST)){
-  $name = htmlspecialchars($_POST['name'], ENT_HTML5, 'UTF-8');
-}
-$mail = "";
-if(array_key_exists('mail', $_POST)){
-  $mail = htmlspecialchars($_POST['mail'], ENT_HTML5, 'UTF-8');
-}
-$tel = "";
-if(array_key_exists('mail', $_POST)){
-  $tel = htmlspecialchars($_POST['tel'], ENT_HTML5, 'UTF-8');
-}
-$content = "";
-if(array_key_exists('content', $_POST)){
-  $content = htmlspecialchars($_POST['content'], ENT_HTML5, 'UTF-8');
-}
+    require_once 'dbManager.php';
+    try {
+        $db = getDb();
+    } catch (PDOException $e) {
+        print "エラー!: " . $e->getMessage() . "<br/>";
+    } finally {
+        // DB接続解除
+        $db = null;
+    }
 ?>
 <!DOCTYPE html>
 <html lang="ja">
